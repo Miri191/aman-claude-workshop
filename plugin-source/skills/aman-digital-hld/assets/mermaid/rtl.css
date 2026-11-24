@@ -1,0 +1,7 @@
+/* Bidi fix: every label decides its own direction from its first strong character.
+   Hebrew labels become right-to-left (English words and parentheses land on the correct side),
+   English labels stay left-to-right. Without this, Chromium lays out Hebrew labels as LTR. */
+text, tspan, foreignObject div, foreignObject span, foreignObject p,
+.nodeLabel, .edgeLabel, .label, .messageText, .noteText, .actor, .labelText, .loopText {
+  unicode-bidi: plaintext;
+}

@@ -1,0 +1,777 @@
+{
+  "meta": {
+    "lang": "he",
+    "doc_type": "מסמך בדיקה",
+    "title": "מבחן לחץ – כיווניות ורכיבים",
+    "subtitle": "כל סוגי הבלוקים ומקרי קצה של עברית ואנגלית",
+    "client": "אמן דיגיטל",
+    "project": "aman-tech-spec",
+    "authors": [
+      "צוות בדיקות אוטומטיות"
+    ],
+    "status": "בדיקה",
+    "toc": true,
+    "toc_levels": 3,
+    "details": [
+      [
+        "סביבה",
+        "Test / UAT"
+      ]
+    ]
+  },
+  "vars": {
+    "svc": "UpdateCarBluetooth",
+    "max_limit": "1,000"
+  },
+  "changelog": [
+    {
+      "version": "0.9",
+      "date": "2026-10-01",
+      "author": "צוות בדיקות",
+      "changes": "טיוטה."
+    },
+    {
+      "version": "1.0",
+      "date": "2026-10-29",
+      "author": "צוות בדיקות",
+      "changes": "גרסה לבדיקה – כולל {{svc}} והפניה לסעיף {{sec:bidi}}."
+    }
+  ],
+  "sections": [
+    {
+      "id": "bidi",
+      "title": "משפטים מעורבים (Mixed Hebrew / English)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "גרסה v1.2 של ה־API תומכת ב־C#, ב־.NET 8 וב־Node.js 20."
+        },
+        {
+          "type": "p",
+          "text": "השדה `_links.self` מוחזר רק אם offset > 0, והשדה `@odata.count` לעולם לא."
+        },
+        {
+          "type": "p",
+          "text": "קוד שגיאה 404 (Not Found) מוחזר כש־id לא קיים; 500 (Internal Server Error) – בכל כשל אחר."
+        },
+        {
+          "type": "p",
+          "text": "לפניות: support@aman.co.il או https://api.example.com/v1/items?id=5&lang=he"
+        },
+        {
+          "type": "p",
+          "text": "טווח: 10–20%; מחיר: 1,500 ₪; תאריך: 25.05.2026; שעה: 14:30; גרסה: 3.2.1"
+        },
+        {
+          "type": "p",
+          "text": "Kia Media G5 הוא שם ההתקן, ו־12:A3:72:F1:8B:13 היא הכתובת שלו."
+        },
+        {
+          "type": "p",
+          "text": "נפח מקסימלי 10MB לקובץ, אימות 3DS, מטוס 4XEDD ו־2FA חובה; כתובת IPv4: 10.0.0.1:8080."
+        },
+        {
+          "type": "p",
+          "text": "מטבע (ISO 4217) – למשל USD, EUR או ILS; ערך מקסימלי {{max_limit}}."
+        },
+        {
+          "type": "p",
+          "text": "**שים לב:** הערך `null` אינו מותר ב־primitives; \"רכב מחובר\" הוא סטטוס, וסה\"כ ההזמנות כולל את הצ'ק-אין."
+        },
+        {
+          "type": "p",
+          "text": "Chrome – 5 גרסאות אחרונות; Safari – 2 גרסאות."
+        },
+        {
+          "type": "p",
+          "text": "OAuth 2.0 Bearer Token חובה בכל קריאה – ראה סעיף {{sec:nest_c}} ({{title:nest_c}}) ותרשים {{fig:flow_hex}}."
+        },
+        {
+          "type": "p",
+          "text": "ממשק {{svc}} (POST) מחזיר IsError=0 בהצלחה."
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "רשימות",
+      "blocks": [
+        {
+          "type": "bullets",
+          "items": [
+            "פריט ראשון עם `code`",
+            {
+              "text": "פריט עם תתי־פריטים",
+              "sub": [
+                "תת־פריט א׳",
+                "תת־פריט ב׳ עם English words inside"
+              ]
+            },
+            "פריט אחרון."
+          ]
+        },
+        {
+          "type": "numbered",
+          "items": [
+            "רשימה ממוספרת ראשונה – 1",
+            "רשימה ממוספרת ראשונה – 2",
+            {
+              "text": "פריט עם תת־מספור",
+              "sub": [
+                "תת 1",
+                "תת 2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": "רשימה שנייה חייבת להתחיל שוב מ־1:"
+        },
+        {
+          "type": "numbered",
+          "items": [
+            "רשימה שנייה – 1",
+            "רשימה שנייה – 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "callouts",
+      "title": "תיבות הדגשה",
+      "blocks": [
+        {
+          "type": "callout",
+          "kind": "note",
+          "text": "הערה רגילה עם `inline code`."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "text": "לידיעה."
+        },
+        {
+          "type": "callout",
+          "kind": "warning",
+          "text": "אזהרה – iOS לא נתמך."
+        },
+        {
+          "type": "callout",
+          "kind": "decision",
+          "text": "החלטה – שומרים את dateTimeUtc כמקור האמת."
+        },
+        {
+          "type": "callout",
+          "kind": "open",
+          "label": "לבירור",
+          "text": "סוגיה פתוחה עם תווית מותאמת."
+        },
+        {
+          "type": "note",
+          "text": "הערת שוליים קטנה."
+        }
+      ]
+    },
+    {
+      "id": "tables",
+      "title": "טבלאות",
+      "sections": [
+        {
+          "id": "long_table",
+          "title": "טבלת שדות ארוכה שחוצה עמודים",
+          "blocks": [
+            {
+              "type": "table",
+              "id": "long",
+              "caption": "טבלה ארוכה עם קבוצות",
+              "columns": "api_response",
+              "rows": [
+                {
+                  "group": "קבוצה א – identification"
+                },
+                {
+                  "name": "a.field01",
+                  "desc": "שדה 1",
+                  "type": "String",
+                  "example": "x",
+                  "notes": "הערה"
+                },
+                {
+                  "name": "a.field02",
+                  "desc": "שדה 2",
+                  "type": "Integer",
+                  "example": "2",
+                  "notes": ""
+                },
+                {
+                  "name": "a.field03",
+                  "desc": "שדה 3",
+                  "type": "Boolean",
+                  "example": "true",
+                  "notes": ""
+                },
+                {
+                  "name": "a.field04",
+                  "desc": "שדה 4",
+                  "type": "String",
+                  "example": "x",
+                  "notes": [
+                    "נקודה ראשונה",
+                    "נקודה שנייה עם English"
+                  ]
+                },
+                {
+                  "name": "a.field05",
+                  "desc": "שדה 5",
+                  "type": "String",
+                  "example": "",
+                  "notes": ""
+                },
+                {
+                  "name": "a.field06",
+                  "desc": "שדה 6",
+                  "type": "String",
+                  "example": "x",
+                  "notes": "שורה ראשונה\nשורה שנייה"
+                },
+                {
+                  "name": "a.field07",
+                  "desc": "שדה 7",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "a.field08",
+                  "desc": "שדה 8",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "group": "קבוצה ב – departure.scheduledTime"
+                },
+                {
+                  "name": "departure.scheduledTime.localContext.timeZone",
+                  "desc": "נתיב ארוך מאוד",
+                  "type": "String",
+                  "example": "Asia/Jerusalem",
+                  "notes": "בדיקת שבירת שורה"
+                },
+                {
+                  "name": "b.field10",
+                  "desc": "שדה 10",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field11",
+                  "desc": "שדה 11",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field12",
+                  "desc": "שדה 12",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field13",
+                  "desc": "שדה 13",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field14",
+                  "desc": "שדה 14",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field15",
+                  "desc": "שדה 15",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field16",
+                  "desc": "שדה 16",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field17",
+                  "desc": "שדה 17",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field18",
+                  "desc": "שדה 18",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field19",
+                  "desc": "שדה 19",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field20",
+                  "desc": "שדה 20",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field21",
+                  "desc": "שדה 21",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field22",
+                  "desc": "שדה 22",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field23",
+                  "desc": "שדה 23",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field24",
+                  "desc": "שדה 24",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field25",
+                  "desc": "שדה 25",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field26",
+                  "desc": "שדה 26",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field27",
+                  "desc": "שדה 27",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field28",
+                  "desc": "שדה 28",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field29",
+                  "desc": "שדה 29",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field30",
+                  "desc": "שדה 30",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field31",
+                  "desc": "שדה 31",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field32",
+                  "desc": "שדה 32",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field33",
+                  "desc": "שדה 33",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field34",
+                  "desc": "שדה 34",
+                  "type": "String",
+                  "example": "x",
+                  "notes": ""
+                },
+                {
+                  "name": "b.field35",
+                  "desc": "שדה 35",
+                  "type": "String",
+                  "example": "x",
+                  "notes": "אחרון"
+                }
+              ],
+              "note": "הערה מתחת לטבלה – ראה טבלה {{tbl:long}}."
+            }
+          ]
+        },
+        {
+          "id": "presets",
+          "title": "כל תבניות העמודות",
+          "sections": [
+            {
+              "id": "nest_c",
+              "title": "רמה שלישית – תבניות",
+              "blocks": [
+                {
+                  "type": "table",
+                  "columns": "api_request",
+                  "rows": [
+                    [
+                      "limit",
+                      "כמות",
+                      "Integer",
+                      true,
+                      "100",
+                      "ברירת מחדל"
+                    ],
+                    [
+                      "offset",
+                      "דילוג",
+                      "Integer",
+                      false,
+                      "0",
+                      ""
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "db_table",
+                  "rows": [
+                    [
+                      "Id",
+                      "INT",
+                      true,
+                      "PK",
+                      "מזהה",
+                      "IDENTITY"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "errors",
+                  "rows": [
+                    [
+                      "400",
+                      "Bad Request",
+                      "קלט לא תקין",
+                      "לתקן"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "mapping",
+                  "rows": [
+                    [
+                      "SRC_COL",
+                      "target.path",
+                      "המרה ל־UTC"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "params",
+                  "rows": [
+                    [
+                      "ffp_type",
+                      "ALL"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "environments",
+                  "rows": [
+                    [
+                      "Test",
+                      "https://test.example.com"
+                    ],
+                    [
+                      "Prod",
+                      "יעודכן ע\"י צוות הפיתוח"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "open_issues",
+                  "rows": [
+                    [
+                      "סוגיה",
+                      "QA",
+                      "פתוח"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "nfr",
+                  "rows": [
+                    [
+                      "זמינות",
+                      "99.9%",
+                      ""
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "states",
+                  "rows": [
+                    [
+                      "מחובר",
+                      "תנאי",
+                      "תצוגה"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "test_cases",
+                  "rows": [
+                    [
+                      "תרחיש",
+                      "צעד",
+                      "תוצאה"
+                    ]
+                  ]
+                },
+                {
+                  "type": "table",
+                  "columns": "glossary",
+                  "labels": {
+                    "term": "מונח מותאם"
+                  },
+                  "rows": [
+                    [
+                      "SLA",
+                      "Service Level Agreement"
+                    ]
+                  ]
+                },
+                {
+                  "type": "kv",
+                  "preset": "interface",
+                  "data": {
+                    "name": "ממשק בדיקה",
+                    "service": "TestService",
+                    "endpoint": "/v1/test",
+                    "method": "GET"
+                  },
+                  "rows": [
+                    [
+                      "שדה נוסף",
+                      "ערך נוסף"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "part": "חלק ב – קוד ותרשימים",
+      "title": "בלוקי קוד",
+      "blocks": [
+        {
+          "type": "code",
+          "id": "ex_obj",
+          "title": "JSON כאובייקט:",
+          "json": {
+            "name": "שם בעברית",
+            "list": [
+              1,
+              2,
+              3
+            ],
+            "nested": {
+              "ok": true,
+              "value": null
+            }
+          }
+        },
+        {
+          "type": "code",
+          "language": "json",
+          "title": "JSON כטקסט:",
+          "text": "{\n  \"a\": 1,\n  \"b\": [\"x\", \"y\"]\n}"
+        },
+        {
+          "type": "code",
+          "language": "json",
+          "lenient": true,
+          "title": "JSON עם השמטה מכוונת:",
+          "text": "{\n  \"data\": [ ... ]\n}"
+        },
+        {
+          "type": "code",
+          "language": "sql",
+          "lines": [
+            "SELECT Airline, FlightNo",
+            "FROM Master_Flights",
+            "WHERE Airline = 'LY'  -- ברירת מחדל"
+          ]
+        },
+        {
+          "type": "table",
+          "id": "ex_fields",
+          "columns": "api_response",
+          "rows": [
+            {
+              "name": "name",
+              "desc": "שם",
+              "type": "String",
+              "example": "",
+              "notes": ""
+            },
+            {
+              "name": "list[]",
+              "desc": "רשימה",
+              "type": "Array",
+              "example": "",
+              "notes": ""
+            },
+            {
+              "name": "nested.ok",
+              "desc": "דגל",
+              "type": "Boolean",
+              "example": "",
+              "notes": ""
+            },
+            {
+              "name": "nested.value",
+              "desc": "ערך",
+              "type": "String",
+              "example": "",
+              "notes": "nullable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "figs",
+      "title": "תרשימים ותמונות",
+      "blocks": [
+        {
+          "type": "diagram",
+          "id": "flow_hex",
+          "caption": "תרשים זרימה עם צורת משושה וסוגריים",
+          "mermaid": [
+            "flowchart TD",
+            "    A([GET /v1/items עם מסננים]) --> B{{הכנה – Hexagon}}",
+            "    B --> C{Bluetooth פעיל?}",
+            "    C -- כן --> D[\"שליחה ל-API (POST) ושמירה – סעיף {{sec:code}}\"]",
+            "    C -- לא --> E[(App_Cars)]",
+            "    D --> F[\"מערכת צרכנית (OPS+)\"]"
+          ]
+        },
+        {
+          "type": "diagram",
+          "id": "seq",
+          "caption": "תרשים רצף",
+          "mermaid": [
+            "sequenceDiagram",
+            "    participant A as אפליקציה",
+            "    participant S as {{svc}}",
+            "    A->>S: שליחת פרטי שיוך (POST)",
+            "    Note over A,S: הערה בעברית עם JSON",
+            "    S-->>A: IsError=0"
+          ]
+        },
+        {
+          "type": "diagram",
+          "id": "states",
+          "caption": "תרשים מצבים",
+          "mermaid": [
+            "stateDiagram-v2",
+            "    direction RL",
+            "    state \"לא משויך\" as N",
+            "    state \"משויך\" as P",
+            "    [*] --> N",
+            "    N --> P: שיוך",
+            "    P --> N: הסרה"
+          ]
+        },
+        {
+          "type": "image",
+          "id": "two_imgs",
+          "paths": [
+            "assets/phoenix_popup_offer.jpg",
+            "assets/phoenix_popup_permission.jpg"
+          ],
+          "height_cm": 6,
+          "caption": "שתי תמונות זו לצד זו"
+        },
+        {
+          "type": "image",
+          "path": "assets/phoenix_settings_1.jpg",
+          "width_cm": 4
+        },
+        {
+          "type": "page_break"
+        },
+        {
+          "type": "p",
+          "text": "פסקה אחרי מעבר עמוד."
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "type": "json_fields",
+      "json": "ex_obj",
+      "table": "ex_fields",
+      "require_all": "error"
+    }
+  ]
+}

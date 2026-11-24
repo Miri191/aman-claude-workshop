@@ -1,0 +1,16 @@
+{
+  "name": "aman-digital",
+  "version": "0.2.1",
+  "description": "Aman Digital studio toolkit: house-format HLD, price proposals, project briefs, meeting summaries, Figma-to-code, RTL prototyping, frontend design and web app testing skills, a design reviewer agent, and the studio's connectors (Microsoft 365, Figma, Mobbin).",
+  "author": {
+    "name": "Miri Rozman, Aman Digital"
+  },
+  "keywords": [
+    "aman-digital",
+    "hld",
+    "proposal",
+    "brief",
+    "rtl",
+    "figma"
+  ]
+}

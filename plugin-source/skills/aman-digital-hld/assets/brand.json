@@ -1,0 +1,33 @@
+{
+  "company": "אמן דיגיטל",
+  "company_en": "Aman Digital",
+  "address": "שמשון 9, פתח תקווה",
+  "address_en": "9 Shimshon St., Petah Tikva",
+  "footer_note": "מסמך זה סודי ומיועד לנמענים בלבד",
+  "footer_note_en": "Confidential – intended for the named recipients only",
+  "logo": "logo.png",
+  "logo_width_px": 150,
+  "logo_aspect": 0.17485,
+  "font": "Arial",
+  "code_font": "Consolas",
+  "colors": {
+    "primary": "0045FF",
+    "navy": "002148",
+    "text": "3C4452",
+    "muted": "8A93A3",
+    "row_alt": "F7F9FD",
+    "label_fill": "F1F5FD",
+    "group_fill": "E8EEFB",
+    "callout_fill": "EEF3FB",
+    "border": "D5DDEC",
+    "code_fill": "F6F8FC",
+    "code_border": "D5DDEC",
+    "code_text": "1F2A44",
+    "warn_fill": "FFF6E5",
+    "warn_border": "E8B04B",
+    "ok_fill": "ECF8F1",
+    "ok_border": "5BB47E",
+    "open_fill": "FDF0EE",
+    "open_border": "E07A6F"
+  }
+}
