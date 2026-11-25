@@ -12,6 +12,10 @@ Produce a Hebrew, right-to-left Word proposal in Aman Digital's house format, re
 2. List open questions and assumptions first. Ask the user only about what blocks pricing (scope, deliverables, deadlines); mark the rest as assumptions in the document.
 3. Never invent client facts, names or numbers. Use bracketed placeholders such as [שם הלקוח] for anything not given.
 
+## Bundled files
+- `assets/proposal-template.docx`: the house template. Build the proposal from it: same chapters, same order, same styling. Fill the bracketed placeholders; keep a placeholder in brackets when the information is missing.
+- `assets/commercial-terms.md`: rate, VAT and payment terms. Use it as the source for pricing and terms, and flag any line still marked [להשלים].
+
 ## Structure
 1. Cover: client name, project name, date, "אמן דיגיטל | סטודיו UX/UI".
 2. רקע ומטרות: the client's need in their words, and what success looks like.
@@ -23,10 +27,8 @@ Produce a Hebrew, right-to-left Word proposal in Aman Digital's house format, re
 8. תנאים מסחריים: payment terms, validity, change requests.
 9. הנחות ושאלות פתוחות: everything assumed while pricing.
 
-## Commercial defaults (confirm with the user if the brief suggests otherwise)
-- Rate: 250 ₪ per hour; some projects are priced at 240 ₪ per hour.
-- Payment: 50% on approval, 50% on delivery.
-- Prices before VAT.
+## Commercial defaults
+Take them from `assets/commercial-terms.md`. Confirm with the user if the brief suggests otherwise.
 
 ## Format
 - Word document (.docx), Hebrew, right-to-left, right-aligned.
