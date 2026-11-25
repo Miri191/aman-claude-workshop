@@ -6,8 +6,11 @@
 
 | מה | קישור |
 | --- | --- |
+| פרויקט הצעות מחיר מוכן | [proposal-project](proposal-project): הוראות, תבנית ותנאים, הקמה ב-3 דקות |
+| מערכת העיצוב של אמן דיגיטל | [design-system](design-system): צבעים, טיפוגרפיה, ריווחים ורדיוסים, כולל tokens.css לאבי-טיפוס |
 | הפלאגין של אמן דיגיטל | [aman-digital.plugin](aman-digital.plugin) (לוחצים על הקובץ ואז על Download) |
-| סיכום פגישה לתרגיל 1 | [meeting-notes-sample.md](workshop-materials/meeting-notes-sample.md) |
+| סיכום פגישה לתרגיל "מבריף לאב-טיפוס" | [meeting-notes-sample.md](workshop-materials/meeting-notes-sample.md) |
+| בריף מוכן, לגיבוי | [brief-ready.md](workshop-materials/brief-ready.md): למי שנתקע עם /project-brief |
 | תיקיית דוגמה לתרגיל Cowork | [cowork-sample-folder](workshop-materials/cowork-sample-folder) |
 
 ## מה יש בפלאגין
